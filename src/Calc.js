@@ -3,7 +3,7 @@ import "./App.css";
 export default function Calc() {
   const [total, setTotal] = useState(0);
   const [isActive, setActive] = useState("");
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState("");
   const [gecici, setGecici] = useState(0);
   const btnDizi = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
@@ -12,29 +12,36 @@ export default function Calc() {
     setActive("+");
     setGecici(counter);
     setTotal(parseInt(total) + parseInt(counter));
-    setCounter(0);
+    setCounter("");
+
   }
   function cikar() {
     setActive("-");
     setGecici(counter);
     setTotal(parseInt(total) - parseInt(counter));
-    setCounter(0);
+    setCounter("");
   }
   function carp() {
     setActive("*");
     setGecici(counter);
     setTotal(parseInt(total) * parseInt(counter));
-    setCounter(0);
+    setCounter("");
   }
   function bol() {
-    setActive("/");
-    setGecici(counter);
-    setTotal(parseInt(total) / parseInt(counter));
-    setCounter(0);
+    // setActive("/");
+    // setGecici(counter);
+    // setTotal(parseInt(total) / parseInt(counter));
+    // setCounter(0);
+    alert("Hatalı çalışıyor.")
   }
   function resetF() {
     setActive("");
     setTotal(0);
+    setGecici(0);
+  }
+  function btn(item){
+    setCounter(counter+item)
+    
   }
   return (
     <div className="hesap-box">
@@ -63,9 +70,9 @@ export default function Calc() {
         <button onClick={() => bol()}>/</button>
         <button onClick={() => resetF()}>C</button>
       </div>
-      <div>
+      <div className="btn-dizi">
         {btnDizi.map((item) => (
-          <button onClick={()=>setCounter(item)}>{item}</button>
+          <button onClick={()=>btn(item)}>{item}</button>
         ))}
       </div>
     </div>
