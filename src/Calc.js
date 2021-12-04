@@ -7,7 +7,11 @@ export default function Calc() {
   const [gecici, setGecici] = useState(0);
   const btnDizi = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-  useEffect(() => {}, [total]);
+  useEffect(() => {
+    if(total===0){
+      setGecici(0)
+    }
+  }, [total]);
   function topla() {
     setActive("+");
     setGecici(counter);
@@ -47,7 +51,7 @@ export default function Calc() {
     <div className="hesap-box">
       <div className="lbl-div">
         <label for="total" id="total" value="total" name="totaL">
-          Total: {total}{" "}
+          Sonuç: {total}{" "}
         </label>
         <label for="islem" id="islem" value="islem" name="islem">
           Islem: {isActive}{" "}
