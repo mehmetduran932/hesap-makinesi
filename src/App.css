@@ -4,30 +4,47 @@
   justify-content: space-around;
 }
 .box1 {
-  width: 400px;
-  height: 800px;
+  width: 300px;
+  height: 450px;
   border-style: solid;
   border-color: black;
   padding-left: 10px;
   padding-top: 10px;
 }
-.hesap-box input{
-  width: 380px;
-  height: 50px;
-  margin-top: 50px;
-  text-align: right;
+.box2{
+  float: right;
+  width: 100px;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
-.hesap-box button{
+.hesap-box input {
+  width: 250px;
+  height: 50px;
+  margin-top: 30px;
+  text-align: right;
+  padding-left: 30px;
+}
+.hesap-box button {
   width: 50px;
   height: 50px;
   margin-left: 10px;
   margin-top: 10px;
+  text-align: center;
 }
-.hesap-box label{
-  background-color:burlywood;
+.hesap-box label {
+  margin-top: 150px;
+  background-color: burlywood;
   color: black;
   width: 400px;
 }
-.btn-dizi{
-  
+.lbl-div{
+  margin-top: 25px;
+}
+.btn-dizi {
+  width: 200px;
+  height: 100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
 }

@@ -32,7 +32,7 @@ export default function Calc() {
     // setGecici(counter);
     // setTotal(parseInt(total) / parseInt(counter));
     // setCounter(0);
-    alert("Hatalı çalışıyor. Hata düzeltilene kadar pasif")
+    alert("Hatalı çalışıyor. Hata düzeltilene kadar pasif.")
   }
   function resetF() {
     setActive("");
@@ -45,7 +45,7 @@ export default function Calc() {
   }
   return (
     <div className="hesap-box">
-      <div>
+      <div className="lbl-div">
         <label for="total" id="total" value="total" name="totaL">
           Total: {total}{" "}
         </label>
@@ -63,7 +63,7 @@ export default function Calc() {
           onChange={(e) => setCounter(e.target.value)}
         ></input>
       </div>
-      <div>
+      <div className="box2">
         <button onClick={() => topla()}>+</button>
         <button onClick={() => cikar()}>-</button>
         <button onClick={() => carp()}>*</button>
