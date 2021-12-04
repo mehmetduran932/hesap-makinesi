@@ -32,7 +32,7 @@ export default function Calc() {
     // setGecici(counter);
     // setTotal(parseInt(total) / parseInt(counter));
     // setCounter(0);
-    alert("Hatalı çalışıyor.")
+    alert("Hatalı çalışıyor. Hata düzeltilene kadar pasif")
   }
   function resetF() {
     setActive("");
